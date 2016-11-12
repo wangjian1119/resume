@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /> 
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-</head>
-<body>
- <div class="swiper-container"> 
-        <div class="swiper-wrapper">
-            <div class="swiper-slide swiper1"> 
-                <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">welcome</p>
-            </div> 
-            <div class="swiper-slide swiper2">
-            	<!--<img src="images/img1.jpg">-->
-            	<div><span>姓名</span><span>王建</span></div>
-            	<div><span>年龄</span><span>21</span></div>
-            	<div><span>毕业院校</span><span>青岛职业技术学院</span></div>           	
-            </div>
-            <div class="swiper-slide">Slide 3
-            	<button id="enter">点击进去详情 </button>
-            </div>
-        </div>
-</div>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+	<body>
+		<!--场景页-->
+		<div class="swiper-container">
+			<!--<div class="musicA">
+			<span id="sp_mus" class="annim"><img src="img/music.png" width="100%"/></span>
+			<audio src="Faded (Instrumental) - Alan Walker.mp3" autoplay="autoplay"></audio>
+		</div>-->
+			<div class="swiper-wrapper">
+				<div class="swiper-slide swiper1">
+					<p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">welcome</p>
+				</div>
+				<div class="swiper-slide swiper3">
+					<img src="images/swiper3img1.png"  class="ani img1" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s"/>	
+					<img src="images/swiper3img2.png"  class="img2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s"/>	
+					<img src="images/swiper3img3.png"  class="ani img3" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s"/>	
+					<img src="images/swiper3img4.png"  class="ani img4"/>	
 
-<div id="myscroll">
-    <div id="header"><div></div>iScroll<div></div></div>
-        <div id="wrapper">
-            <div id="scroller">
-                <ul>
-                </ul>
-            </div>
-        </div>
-    <div id="footer">
-        <div id="skill">技能</div>
-        <div id="project">项目</div>
-        <div id="work">经历</div>
-        <div id="my">我的</div>
-    </div>
-</div>
+					<div class="div2 ani"	swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s">性格特点：外 向、 活 泼 好 动； 轻 松 愉 快、 热 情、 可 亲、 开 朗、 豁 达； 好 交 际、 健 谈、 机 敏； 适应 能 力 强、 善 组 织、 工 作 有 效 率、 富 有 朝 气； 表 情 丰 富、 情 绪 发 生 迅 速 丰 富 多 变</div>
+				</div>
+				<div class="swiper-slide swiper2">
+					<img src="images/2157b315e31cafc.jpg" class="ani img1" swiper-animate-effect="fadeInDown" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s" />
+					<div>
+            			<span class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s">姓名：王建</span>
+            			<span class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s">毕业院校：青岛职业技术学院</span>
+            			<span class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s">应聘职位：web前端应用开发师</span>
+            			<span class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s">联系方式：17854294250</span>        			
+            		</div>
+					<button id="enter" class="ani" swiper-animate-effect="flip" swiper-animate-duration="2s" swiper-animate-delay="0.3s">点击进入详情</button>
+				</div>
+				
+			</div>
+		</div>
 
-<script type="text/javascript" src="js/index.js"></script>
-<!-- src="js/index.js" 模块化打包统一入口 -->
-</body>
+		<div id="myscroll">
+			<div id="header">
+				<div><i class="iconfont">&#xec81;</i></div>
+				<div id="biaoti">个人技能</div>
+				<div><i class="iconfont">&#xe60c;</i></div>
+			</div>
+			<div id="wrapper">
+				<div id="scroller">
+					<ul></ul> 
+				</div>
+			</div>
+			<div id="footer">
+				<div id="skill"><i class="iconfont">&#xe613;</i>技能</div>
+				<div id="project"><i class="iconfont">&#xe601;</i>项目</div>
+				<div id="work"><i class="iconfont">&#xe6c8;</i>经历</div>
+				<div id="my"><i class="iconfont">&#xe614;</i>我的</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/index.js"></script>
+		<!-- src="js/index.js" 模块化打包统一入口 -->
+	</body>

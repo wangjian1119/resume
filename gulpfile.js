@@ -71,6 +71,12 @@ gulp.task('webserver', function() {
               res.end(data);
             });
             return;
+           case '/api/me':
+            res.setHeader('Content-Type','application/json');   
+            fs.readFile('mock/me.json','utf-8',function(err,data){
+              res.end(data);
+            });
+            return;
           default:
           ;
         }
@@ -155,7 +161,7 @@ gulp.task('images',function(){
 //设置监控
 gulp.task('watch',function(){
   gulp.watch('./src/index.html',['copy-index']);
-
+  gulp.watch('src/images/*',['images']);
   var queue = sequence(300);
   watch('src/scripts/**/*.js',{
     name:'JS',

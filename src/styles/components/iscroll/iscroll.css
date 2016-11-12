@@ -29,12 +29,24 @@ body {
 	width: 100%;
 	height: 45px;
 	line-height: 45px;
-	background: #CD235C;
+	background: #2fa2de;
 	padding: 0;
 	color: #eee;
 	font-size: 20px;
 	text-align: center;
 	font-weight: bold;
+	
+	
+	display: -webkit-box;
+ 	display: -ms-flexbox;
+ 	display: -webkit-flex;
+ 	display: flex;
+ 	justify-content:space-around
+}
+#header div i{
+	font-size: 25px;
+	color: #fff;
+	font-weight: 400;
 }
 
 #footer {
@@ -67,6 +79,7 @@ body {
 	width: 100%;
 	background: #ccc;
 	overflow: hidden;
+	overflow-y: scroll;
 }
 
 #scroller {
@@ -99,12 +112,49 @@ body {
 	text-align: left;
 }
 
-#scroller li {
+#scroller ul li {
 	padding: 0 10px;
-	height: 40px;
-	line-height: 40px;
+	height: 150px;
+	background-color: red;
+	line-height: 30px;
 	border-bottom: 1px solid #ccc;
 	border-top: 1px solid #fff;
 	background-color: #fafafa;
 	font-size: 14px;
+	padding: 5px;
+	display: -webkit-box;
+ 	display: -ms-flexbox;
+ 	display: -webkit-flex;
+ 	display: flex;
+ 	overflow: hidden;
+}
+#scroller li div:first-child{
+	flex: 2;
+	display: -webkit-box;
+ 	display: -ms-flexbox;
+ 	display: -webkit-flex;
+ 	display: flex;
+ 	-webkit-box-pack: center;
+ 	-ms-flex-pack: center;
+ 	-webkit-justify-content: center;
+ 	justify-content: center;
+ 	-webkit-box-align: center;
+ 	-ms-flex-align: center;
+ 	-webkit-align-items: center;
+ 	align-items: center;
+	
+}
+#scroller li div:first-child a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+#scroller li div:last-child{
+	flex: 3;
+	font-size: 12px;
+	padding: 20px 5px;
+}
+#scroller ul li img{
+	width: 80%;
+	height: 80%;
 }

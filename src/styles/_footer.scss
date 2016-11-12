@@ -1,12 +1,20 @@
 #footer{
 	display:flex;
 	justify-content:center;
-	align-item:center;
+	align-items:center;	
 	div{
 		flex:1;
 		text-align:center;
 		color:#fff; 
+		height: 100%;
+		display:flex;
+        justify-content:center;
+        align-items: center;
+        align-content: center; 
 	}
+	div i{
+        vertical-align: bottom;
+    }
 }
 #scroller ul li{
 	display:flex;

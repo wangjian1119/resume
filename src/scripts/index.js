@@ -10,7 +10,7 @@ var swiper = new Swiper ('.swiper-container', {
     swiperAnimate.swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
   }    
  }) 
-
+//sdf
 var $ = require('zepto-modules/zepto');
 require('zepto-modules/event');
 require('zepto-modules/ajax');
@@ -19,17 +19,17 @@ module.exports = $;
 
 $("#myscroll").hide();
 $("#enter").tap(function(){
-	$("#myscroll").show();
-	$(".swiper-container").hide();
+$("#myscroll").show();
+$(".swiper-container").hide();
 	
 
 	$.post('/api/skill', {}, function(response){
-     var data=response;
-     $("#scroller ul").html("");
-     $("#scroller ul").append($("<li class='theli'><div>类型</div><div>熟悉程度</div><div>名称</div><div>时间</div></li>"));
-     for(var i in data){
-     $("#scroller ul").append($("<li class='theli'><div>"+data[i].category+"</div><div>"+data[i].level+"</div><div>"+data[i].name+"</div><div>"+data[i].time+"</div></li>"));
-     }
+    var data=response;
+    	for(var i in data){     	 
+     		$("#scroller ul").append($("<li class='theli'><div><img src='"+
+     		data[i].images+"'/></div><div>"+
+     		data[i].level+data[i].name+data[i].category+"</div></li>"));
+    	}
 	})
 
 
@@ -38,30 +38,52 @@ $("#enter").tap(function(){
 $("#skill").tap(function(){	
 	$.post('/api/skill', {}, function(response){
      var data=response;
+      $("#biaoti").html("个人技能")
      $("#scroller ul").html("");
-     $("#scroller ul").append($("<li class='theli'><div>类型</div><div>熟悉程度</div><div>名称</div><div>时间</div></li>"));
      for(var i in data){
-     $("#scroller ul").append($("<li class='theli'><div>"+data[i].category+"</div><div>"+data[i].level+"</div><div>"+data[i].name+"</div><div>"+data[i].time+"</div></li>"));
+	    		$("#scroller ul").append($("<li class='theli'><div><img src='"+
+	     		data[i].images+"'/></div><div>"+
+	     		data[i].level+data[i].name+data[i].category+"</div></li>"));
      }
 	})
 })
 $("#work").tap(function(){	
 	$.post('/api/work', {}, function(response){
-     var data=response;
-     $("#scroller ul").html("");
-     $("#scroller ul").append($("<li class='theli'><div>类型</div><div>单位名称</div><div>职位</div><div>时间</div></li>"));
-     for(var i in data){
-     $("#scroller ul").append($("<li class='theli'><div>"+data[i].category+"</div><div>"+data[i].name+"</div><div>"+data[i].posts+"</div><div>"+data[i].time+"</div></li>"));
-     }
+    var data=response;
+     $("#biaoti").html("个人经历")
+    $("#scroller ul").html("");
+    	for(var i in data){     	 
+     		$("#scroller ul").append($("<li class='theli'><div><img src='"+
+     		data[i].image+"'/></div><div>企业类型: "+
+     		data[i].category+"<br />企业名称: "+
+     		data[i].name+"<br />公司职位: "+
+     		data[i].posts+"<br />工作时间: "+
+     		data[i].time+"</div></li>"));
+    	}
 	})
 })
 $("#project").tap(function(){	
 	$.post('/api/project', {}, function(response){
-     var data=response;
-     $("#scroller ul").html("");
-     $("#scroller ul").append($("<li class='theli'><div>类型</div><div>熟悉程度</div><div>名称</div><div>时间</div></li>"));
-     for(var i in data){
-     $("#scroller ul").append($("<li class='theli'><div>"+data[i].category+"</div><div>"+data[i].description+"</div><div>"+data[i].name+"</div><div>"+data[i].detail+"</div></li>"));
-     }
+    var data=response;
+    $("#biaoti").html("个人项目")
+    $("#scroller ul").html("");
+    	for(var i in data){  
+     		$("#scroller ul").append($("<li class='theli'><div><a href='"+data[i].url+
+     		"'><img src='"+
+     		data[i].images+"'/></a></div><div>项目名称："+
+     		data[i].name+"<br />"+data[i].description+""+data[i].detail+"</div></li>"));
+    	}
 	})
+})
+
+$("#my").tap(function(){	
+	console.log("1");
+	$.post('/api/me', {}, function(data){
+		console.log(data)
+		$("#biaoti").html("个人简历 ");
+    $("#scroller ul").html("");
+    $("#scroller ul").append($("<li class='theli'>
+     		data[i].name+</li>"));
+  })
+    
 })

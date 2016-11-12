@@ -7,8 +7,11 @@
  	padding: 0;
  }
 body,html{
-	height: 100%;
+	height: 100%; 
 } 
+li{
+	list-style: none;
+}
  .swiper-container {
  	height: 100%;
  	position: relative;
@@ -19,11 +22,17 @@ body,html{
  	text-align: center;
  	font-size: 18px;
  	background: #fff;
- 	/* Center slide text vertically */
  	display: -webkit-box;
  	display: -ms-flexbox;
  	display: -webkit-flex;
  	display: flex;
+ 	
+ 	background-image: url(../images/bag.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size: 100% 100%;
+ 	color: #FFFFFF;
+ }
+ .swiper1{		
  	-webkit-box-pack: center;
  	-ms-flex-pack: center;
  	-webkit-justify-content: center;
@@ -32,12 +41,83 @@ body,html{
  	-ms-flex-align: center;
  	-webkit-align-items: center;
  	align-items: center;
- 	background: #000; 
- 	color: #FFFFFF;
- }
- .swiper1{		
  	font-size: 50px;
  }
-.swiper2 div{ 
-	width: 100%;
+
+ .swiper2 div{
+ 	position: absolute;
+ 	width: 80%;
+ 	left: 10%;
+ 	top: 30%;
+ 	padding: 10px;
+ 	/*height: 30%;*/
+ 	border: 1px solid #EEEEEE;
+ 	display: -webkit-box;
+ 	display: -ms-flexbox;
+ 	display: -webkit-flex;
+ 	display: flex;
+	flex-direction: column;
+	align-content: flex-start;
+	text-align: left;
+ }
+  .swiper2 div span{
+  	margin-bottom: 10px;
+  }
+.swiper2 img{ 
+	position: absolute;
+	/*width: 80%;
+	left: 10%;
+	top: 25%;
+	height: auto;*/
+}
+.swiper2 .img1,.swiper2 .img2{
+	width: 80%;
+	left: 10%;	
+	top: 5%;
+	height: auto;
+}
+.swiper2 .img2{
+	top: 50%; 
+}
+.swiper2 button{
+	/*width: 20%;*/
+	height: 5%;
+	border-radius: 2px;
+	border: 0px;
+	outline: 0px;
+	position: absolute;
+	left: 40%;
+	bottom: 20%;
+	background-color: #CD235C;
+}
+
+.swiper3 img{
+	position: absolute;
+}
+.swiper3  .img1{
+	z-index: 555;
+	top: 19%;
+	left: 30%;
+}
+.swiper3  .img2{
+	z-index: 555;
+	top:50%;
+	right: 5%;
+}
+
+.swiper3  .img3{
+	z-index: 555;
+	top: 10%;
+	left: 10%;
+}
+.swiper3  .img4{
+	top: 10%;
+	left: 10%;
+}
+.swiper3 .div2{
+	width: 80%;
+	height: auto;
+	position: absolute;
+	bottom: 10%;
+	left: 10%;
 }
