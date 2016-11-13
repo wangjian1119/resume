@@ -78,8 +78,10 @@
 	$(".swiper-container").hide();
 		
 
-		$.post('/api/skill', {}, function(response){
-	    var data=response;
+		$.post('http://651196692.applinzi.com/www/mock/skill.php', {}, function(response){
+	     	  pos=response.indexOf("]"); 
+	          data=response.substring(0,pos+1);
+	           data=JSON.parse(data);
 	    	for(var i in data){     	 
 	     		$("#scroller ul").append("<li class='theli'><div><img src='"+
 	     		data[i].images+"'/></div><div>"+
@@ -91,8 +93,10 @@
 	})
 
 	$("#skill").tap(function(){	
-		$.post('/api/skill', {}, function(response){
-	     var data=response;
+		$.post('http://651196692.applinzi.com/www/mock/skill.php', {}, function(response){
+	     	 pos=response.indexOf("]"); 
+	       data=response.substring(0,pos+1);
+	       data=JSON.parse(data);
 	      $("#biaoti").html("个人技能")
 	      $(".active").removeClass("active");
 	      $("#skill").addClass("active");
@@ -105,8 +109,10 @@
 		})
 	})
 	$("#work").tap(function(){	
-		$.post('/api/work', {}, function(response){
-	    var data=response;
+		$.post('http://651196692.applinzi.com/www/mock/work.php', {}, function(response){
+	     pos=response.indexOf("]"); 
+	       data=response.substring(0,pos+1);
+	       data=JSON.parse(data);
 	     $("#biaoti").html("个人经历");
 	     $(".active").removeClass("active");
 	      $("#work").addClass("active");
@@ -122,8 +128,10 @@
 		})
 	})
 	$("#project").tap(function(){	
-		$.post('/api/project', {}, function(response){
-	    var data=response;
+		$.post('http://651196692.applinzi.com/www/mock/project.php', {}, function(response){
+	     pos=response.indexOf("]"); 
+	       data=response.substring(0,pos+1);
+	       data=JSON.parse(data);
 	    $("#biaoti").html("个人项目");
 	    $(".active").removeClass("active");
 	      $("#project").addClass("active");
@@ -138,16 +146,20 @@
 	})
 
 	$("#my").tap(function(){	
-		$.post('/api/me', {}, function(data){
+		$.post('http://651196692.applinzi.com/www/mock/me.php', {}, function(data){
 			$("#biaoti").html("联系方式 ");
 			$(".active").removeClass("active");
 	      	$("#my").addClass("active");
-	    	$("#scroller ul").html("");
+	    	$("#scroller ul").html(""); 
 	    	$("#scroller ul").append("<li class='meli'><img src='"+
 	    	data.images+"' class='ani'/></li><li class='meli'>姓名：王建</li><li class='meli'>手机号:17854294250</li><li>QQ邮箱：651196692@qq.com</li>");
 	  })
 	    
 	})
+
+
+	$(".")
+
 
 /***/ },
 /* 2 */
