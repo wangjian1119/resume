@@ -1,47 +1,50 @@
 <?php
 header("Access-Control-Allow-Origin:*");
 
-$postData = '[{
-    "id": 0,
-    "name": "HTML4/HTML5/ES5/ES6/CommonJs/Amd/Cmd等规范",
-    "lastText": "了解互联网的一些常用规范的知识内容",
-    "face": "img/h5.png"
-  }, {
-    "id": 1,
-    "name": "Jquery/Zepto/Angular/Easyui/BootStrap/Mui/Yo/Ionic",
-    "lastText": "灵活运用众多的框架内容，包括纯界面框架、交互框架及软件集成应用框架",
-    "face": "img/angular.png"
-  }, {
-    "id": 2,
-    "name": "Swiper/Iscroll",
-    "lastText": "熟练操作各种类库及框架插件",
-    "face": "img/jquery.png"
-  }, {
-    "id": 3,
-    "name": "webapp/webChat Jssdk/phonegap",
-    "lastText": "轻松实现轻应用开发、微信集成以及独立移动软件的混合式开发",
-    "face": "img/weixinjs.png"
-  }, {
-    "id": 4,
-    "name": "Fekit/gulp/Hbuilder/Atom/Sublime",
-    "lastText": "对于前端自动化构建工作能够在不同的项目里进行恰当的使用与整合",
-    "face": "img/gulp.png"
-  }, {
-    "id": 5,
-    "name": "行业知识",
-    "lastText": "了解互联网的发展及趋势，移动应用成为未来的方向",
-    "face": "img/phonegap.png"
-  }, {
-    "id": 6,
-    "name": "JavaScript",
-    "lastText": "原生JavaScript",
-    "face": "img/js.png"
-  }, {
-    "id": 7,
-    "name": "Zepto",
-    "lastText": "针对PC端Dom对象的开发模式，较为熟悉",
-    "face": "img/Zepto.png"
-  }]';
+$postData = '[
+    {
+        "category":"规范",
+        "name":"HTML4、HTML5、ES5、ES6、CommonJS、CMD、AMD等",
+        "images":"images/H5.jpg",
+        "time":"1年",
+        "level":"了解"
+    },
+    {
+        "category":"框架",
+        "name":"Jquery、Zepto、AngularJs、Recat、Avalon、vue、jquery easyui、mui（hbuilder）、yo(去哪儿)纯样式框架（scss）等",
+        "images":"images/angularjs.jpg",
+        "time":"2年",
+        "level":"熟悉"
+    },
+    {
+        "category":"类库",
+        "name":"Swiper、Iscroll、moment等",
+        "images":"images/logo-swiper.png",
+        "time":"2年",
+        "level":"熟悉"
+    },
+    {
+        "category":"插件",
+        "name":"Jquery menu plugin、Jquery nav plugin、zepto emoji-expression-plugin等",
+        "images":"images/JQ.jpg",
+        "time":"2年",
+        "level":"熟悉"
+    },
+    {
+        "category":"布局",
+        "name":"Fixed、Fulid、Flex、Responsive",
+        "images":"images/css3.jpg",
+        "time":"3年",
+        "level":"精通"
+    },
+    {
+        "category":"程序",
+        "name":"Javascript原生、Jquery及Zepto插件、AngularJs等",
+        "images":"images/js.jpg",
+        "time":"3年",
+        "level":"精通"
+    }
+]';
 
 //$dataArr =  json_decode($postData);
 //echo json_encode($dataArr[2]);
