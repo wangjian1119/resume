@@ -65,13 +65,19 @@ gulp.task('webserver', function() {
               res.end(data);
             });
             return;
+            case '/api/my':
+            res.setHeader('Content-Type','application/json');
+            fs.readFile('mock/my.json','utf-8',function(err,data){
+              res.end(data);
+            });
+            return;
           case '/api/work':
             res.setHeader('Content-Type','application/json');   
             fs.readFile('mock/work.json','utf-8',function(err,data){
               res.end(data);
             });
             return;
-           case '/api/me':
+            case '/api/me': 
             res.setHeader('Content-Type','application/json');   
             fs.readFile('mock/me.json','utf-8',function(err,data){
               res.end(data);
@@ -150,18 +156,19 @@ var jsDistFiles = ['www/js/index.js'];
 
 //对html文件的版本内容的替换
 gulp.task('html',function(){
-  return gulp.src(['www/ver/**/*.json','www/*.html'])
+  return gulp.src(['www/**/*.json','www/*.html'])
   .pipe(revCollector({replaceReved:true}))
   .pipe(gulp.dest('www/'))
 })
 gulp.task('images',function(){
-  return gulp.src('src/images/*.{png,jpg}').pipe(gulp.dest('www/images'));
+  return gulp.src('./src/images/*.{jpg,png}').pipe(gulp.dest('./www/images'));
 })
 
 //设置监控
 gulp.task('watch',function(){
   gulp.watch('./src/index.html',['copy-index']);
   gulp.watch('src/images/*',['images']);
+
   var queue = sequence(300);
   watch('src/scripts/**/*.js',{
     name:'JS',

@@ -1,9 +1,7 @@
 ﻿{
-	"category": "企业网站",
-	"name": "中国建筑",
-	"url": "http://www.baidu.com",
-	"images": "images/baidu.jpg",
+	
+	"images": "images/erweima.jpg",
 	"description": "建筑行业佼佼者",
 	"detail": "项目耗时2月，主要处理前端页面及程序嵌套，实现基本内容但没有做移动端，故该网站只适应于PC端应用",
 	"tech": "Html5、Css3、JQuery等"
-}
+} 

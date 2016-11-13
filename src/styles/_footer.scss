@@ -11,11 +11,16 @@
         justify-content:center;
         align-items: center;
         align-content: center; 
+        border-radius: 50%;
 	}
 	div i{
         vertical-align: bottom;
     }
+    div.active{
+    background-color: skyblue;
+    }
 }
+
 #scroller ul li{
 	display:flex;
 	justify-content:center;
