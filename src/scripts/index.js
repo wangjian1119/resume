@@ -105,4 +105,9 @@ $("#my").tap(function(){
 })
 
 
-$(".")
+$(".zhaoxiangji").click(function () {
+	captureImage();
+})
+$(".ditu").click(function () {
+	onPlusReady();
+})

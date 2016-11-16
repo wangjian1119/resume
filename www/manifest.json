@@ -1,6 +1,6 @@
 {
     "@platforms": ["android", "iPhone", "iPad"],
-    "id": "",/*应用的标识，创建应用时自动生成，勿手动修改*/
+    "id": "wj",/*应用的标识，创建应用时自动生成，勿手动修改*/
     "name": "www",/*应用名称，程序桌面图标名称*/
     "version": {
         "name": "1.0",/*应用版本名称*/
@@ -106,7 +106,7 @@
     "plus": {
         "splashscreen": {
             "autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
-            "waiting": true/*是否在程序启动界面显示等待雪花，true表示显示，false表示不显示。*/
+            "waiting": true,"delay":"0"/*是否在程序启动界面显示等待雪花，true表示显示，false表示不显示。*/
         },
         "popGesture": "close",/*设置应用默认侧滑返回关闭Webview窗口，"none"为无侧滑返回功能，"hide"为侧滑隐藏Webview窗口。参考http://ask.dcloud.net.cn/article/102*/
         "runmode": "normal",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
@@ -205,7 +205,22 @@
 			"index.html": {
 				"resources": [
 					"js/index-0b202e09a5.js",
-					"css/index-4f9da6c24b.css"
+					"css/index-4f9da6c24b.css",
+					"images/swiper3img4.png",
+					"images/swiper3img3.png",
+					"images/bag.jpg",
+					"images/angularjs.jpg",
+					"images/swiper3img2.png",
+					"images/2157b315e31cafc.jpg",
+					"images/JQ.jpg",
+					"images/js.jpg",
+					"css/index.css",
+					"images/swiper3img1.png",
+					"images/H5.jpg",
+					"css/iconfont.woff",
+					"images/css3.jpg",
+					"js/index.js",
+					"images/logo-swiper.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -223,7 +238,6 @@
 				"js/index-a7c93d4031.js",
 				"js/index-dac559fda1.js",
 				"js/index-2e64cc5b94.js",
-				"css/index.css",
 				"js/index-77fa9931e7.js",
 				"js/index-08cfa8c6cd.js",
 				"js/index-8f81de3d64.js",
@@ -254,7 +268,6 @@
 				"js/index-9431a9f005.js",
 				"js/index-6b284d34a5.js",
 				"js/index-3e0de4dfde.js",
-				"js/index.js",
 				"js/index-5b74dcd144.js",
 				"js/index-51a40510a9.js",
 				"js/index-264d2d744c.js"
