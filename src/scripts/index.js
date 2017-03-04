@@ -76,7 +76,7 @@ $("#work").tap(function(){
 })
 $("#project").tap(function(){	
 	$.post('http://651196692.applinzi.com/www/mock/project.php', {}, function(response){
-    	 pos=response.indexOf("]"); 
+     pos=response.indexOf("]"); 
        data=response.substring(0,pos+1);
        data=JSON.parse(data);
     $("#biaoti").html("个人项目");
@@ -93,16 +93,13 @@ $("#project").tap(function(){
 })
 
 $("#my").tap(function(){	
-	$.post('http://651196692.applinzi.com/www/mock/me.php', {}, function(response){
+	$.post('http://651196692.applinzi.com/www/mock/me.php', {}, function(data){
 		$("#biaoti").html("联系方式 ");
 		$(".active").removeClass("active");
       	$("#my").addClass("active");
     	$("#scroller ul").html(""); 
-    	 pos=response.indexOf("}"); 
-       	var data=response.substring(0,pos+1);
-		data=JSON.parse(data);
     	$("#scroller ul").append("<li class='meli'><img src='"+
-    	data.images+"' class='ani'/></li><li class='meli'>姓名：王祥</li><li class='meli'>手机号:17854294126</li><li>QQ邮箱：813585105@qq.com</li>");
+    	data.images+"' class='ani'/></li><li class='meli'>姓名：王建</li><li class='meli'>手机号:17854294250</li><li>QQ邮箱：651196692@qq.com</li>");
   })
     
 })
